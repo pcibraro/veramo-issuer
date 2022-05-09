@@ -1,0 +1,38 @@
+{
+  "name": "veramo-agent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "copy": "^0.3.2",
+    "copyfiles": "^2.4.1",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@sphereon/core": "^3.1.1-unstable.52",
+    "@sphereon/credential-ld": "^3.1.1-unstable.52",
+    "@sphereon/credential-w3c": "^3.1.1-unstable.52",
+    "@sphereon/data-store": "^3.1.1-unstable.52",
+    "@sphereon/did-manager": "^3.1.1-unstable.52",
+    "@sphereon/did-provider-ethr": "^3.1.1-unstable.52",
+    "@sphereon/did-provider-web": "^3.1.1-unstable.52",
+    "@sphereon/did-resolver": "^3.1.1-unstable.52",
+    "@sphereon/key-manager": "^3.1.1-unstable.52",
+    "@sphereon/kms-local": "^3.1.1-unstable.52",
+    "@sphereon/selective-disclosure": "^3.1.1-unstable.52",
+    "add": "^2.0.6",
+    "ethr-did-resolver": "^5.0.4",
+    "sqlite3": "^5.0.8",
+    "uuid": "^8.3.2",
+    "web-did-resolver": "^2.0.16",
+    "yarn": "^1.22.18"
+  },
+  "scripts": {
+    "id:list": "ts-node ./src/list-identifiers",
+    "id:create": "ts-node ./src/create-identifier",
+    "vc:issue": "ts-node ./src/issue-vc",
+    "copy": "copy ./contexts/*.jsonld ./node_modules/@sphereon/credential-ld"
+  }
+}
